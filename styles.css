@@ -1,0 +1,50 @@
+body{
+    margin: 20px;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+
+#ttt_title{
+    display: grid;
+    grid-template-areas: 
+        "header"
+        "content";
+    
+}
+
+h1{
+    grid-area: header;
+    text-align: center;
+    grid-column: span 2;
+    width: 500px;
+}
+
+.player{
+    grid-area: content;
+    grid-column: span 1;
+}
+
+#p1{
+    text-align: start;
+}
+
+#p2{
+    text-align: end;
+}
+
+#game_board{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    max-width: fit-content;
+    margin-top: 50px;
+}
+
+.square{
+    height: 100px;
+    width: 100px;
+    border: 2px solid black;
+    justify-content: center;
+}
