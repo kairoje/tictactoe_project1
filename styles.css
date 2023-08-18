@@ -1,6 +1,7 @@
 body{
-    margin: 20px;
+    margin: auto;
     align-items: center;
+    justify-content: center;
     display: flex;
     flex-direction: column;
 }
@@ -16,8 +17,10 @@ body{
 h1{
     grid-area: header;
     text-align: center;
+    justify-content: center;
     grid-column: span 2;
     width: 500px;
+    margin-top: 20px;
 }
 
 .player{
@@ -43,8 +46,17 @@ h1{
 }
 
 .square{
+    display: flex;
     height: 100px;
     width: 100px;
     border: 2px solid black;
     justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-align: center;
+    font-size: 50px;
+}
+
+#newGame{
+    margin-top: 20px;
 }
