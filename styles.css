@@ -2,38 +2,21 @@ body{
     margin: auto;
     align-items: center;
     justify-content: center;
+    
     display: flex;
     flex-direction: column;
 }
 
 #ttt_title{
-    display: grid;
-    grid-template-areas: 
-        "header"
-        "content";
-    
-}
-
-h1{
-    grid-area: header;
-    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
-    grid-column: span 2;
-    width: 500px;
-    margin-top: 20px;
 }
 
-.player{
-    grid-area: content;
-    grid-column: span 1;
-}
-
-#p1{
-    text-align: start;
-}
-
-#p2{
-    text-align: end;
+#player{
+    margin-top: 10px;
+    font-size: 30px;
 }
 
 #game_board{
