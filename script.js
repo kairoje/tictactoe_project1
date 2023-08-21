@@ -17,7 +17,7 @@ let player = document.querySelector("#player");
 
 let activePlayer = "X";
 
-player.textContent = `${activePlayer}'s turn.`
+player.textContent = `${activePlayer}'s turn`
 
 const newGameBtn = document.querySelector("#newGame");
 //console.log(newGameBtn);
@@ -27,6 +27,11 @@ let clicks = 0;
 let winCombos = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
 
 let victory = false;
+
+const sfxClick = new Audio("sounds/click_sound.wav");
+const sfxHover = new Audio("sounds/hover_sound.wav");
+const sfxWin = new Audio("sounds/small_win_sound.wav");
+const sfxDraw = new Audio("sounds/draw_sound.wav");
 
 
 
@@ -53,9 +58,10 @@ function checkForWin(){
         }
     }
 
-//when winner is declared that message will display
+    //when winner is declared that message will display
     if(victory){
-        player.textContent = `${activePlayer} wins!`
+        player.textContent = `${activePlayer} wins!`;
+        sfxWin.play();
     }
 }
 
@@ -65,7 +71,9 @@ function switchPlayer(){
     player.textContent = `${activePlayer}'s turn`
 }
 
+
 function startGame(){
+
         
 //at game start each square will be empty and can be clicked
     squareArr.forEach(square => {
@@ -78,13 +86,15 @@ function startGame(){
 
 //...otherwise number of clicks increases by 1. The square that is clicked will be filled with active player sumbol. Then a win check is initiated.
             clicks++
-            console.log(clicks);
+            sfxClick.play();
+            //console.log(clicks);
             square.textContent = activePlayer;
             checkForWin()
 
 //if theres no win but 9 clicks (meaning each square has been clicked) the game ends with a draw, but if there's no win and less than 9 clicks, switch players.
             if(!victory && clicks === 9){
                 player.textContent = "Draw";
+                sfxDraw.play();
             } else if(!victory){
                 switchPlayer()
             }
@@ -101,9 +111,14 @@ newGameBtn.addEventListener('click', () => {
     })
 
 //the clicks and the victory boolean are reset to original status. The player who wins, or last active player is the first for the new game
+    
     clicks = 0;
     victory = false;
     player.textContent = `${activePlayer}'s turn`;
+})
+
+newGameBtn.addEventListener('mouseover', () => {
+    sfxHover.play();
 })
 
 
