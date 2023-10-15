@@ -1,6 +1,8 @@
 # tictactoe_project1
 Tic Tac Toe Project for Interapt Immersive Bootcamp
 
+Link to game: https://kairoje.github.io/tictactoe_project1/
+
 Technologies used: HTML, CSS, Javascript
 
 ## Wireframe:
