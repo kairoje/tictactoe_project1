@@ -3,19 +3,19 @@ Tic Tac Toe Project for Interapt Immersive Bootcamp
 
 Technologies used: HTML, CSS, Javascript
 
-##Wireframe:
+## Wireframe:
 
 ![Tic Tac Toe Wireframe](t_t_t_wireframe.PNG)
 
-##Goals:
-###MVP Bronze:
+## Goals:
+### MVP Bronze:
 
 - Simple layout with lines creating a nine square grid
 - Each player is assigned either “X” or “O”
 - Can click a grid position
 - Highlight winner
 
-###Silver:
+### Silver:
 
 - ~~Add tally mark to player for each win~~ 
 - ~~Add high score~~ 
@@ -23,7 +23,7 @@ Technologies used: HTML, CSS, Javascript
 - Green background in playing field
 - White text color
 
-###Gold:
+### Gold:
 
 - Change text style to match chalk
 - ~~Layover screen to display high score when button is clicked~~
@@ -32,7 +32,7 @@ Technologies used: HTML, CSS, Javascript
 - ~~Add hover to grid~~
 
 
-##Planning:
+## Planning:
 
 *HTML*
     - Body
@@ -65,13 +65,13 @@ Technologies used: HTML, CSS, Javascript
         to check to see if theres a winner => logic: set a variable to check wether or not a round bas been won.
         Loop through the array of win rules, set a variable to hold a win rule array index. Create variables to hold each one of the indicies that lead to a win. If those square indicies are empty checking for a winner can be skipped, if any of the rule indicies are matched current player is the winner. If the current player is a winner highlight player text and end the game, and if all the square are filled and there is no winner then game is a draw. Otherwise switch players
 
-##Tic Tac Toe Draft 1(Final):
+## Tic Tac Toe Draft 1(Final):
 
 This tic tac toe project consist of a title, game status, game board, and a new game button to reset the board. There are two players: X & O, and only one player is allowed to click and fill a sqaure per round. If a player's symbol has three marks in a row in any direction, that player will be declared as the winner. If each square has a symbol but none are three in a row, a draw game will be declared. If a player wants to restart the game, the new game button can be clicked to refresh the game. This button can also be pressed at any moment if necessary. When either player wins a victory sound will play, if there's a draw game a sound indicate so.
 
 
 
-##Coding details:
+## Coding details:
 
 The "Winning" Solution:
 
@@ -80,13 +80,13 @@ Finding the winning logic was the most trying issue I needed to solve during thi
 From there the draw option was created by using a clicks logic. If there are nine clicks on the board and the win boolean isn't activated, it is assumed that no win combos were matched. The game board is then deactivated and "draw" is displayed. 
 
 
-##Getting Everything Centered:
+## Getting Everything Centered:
 
 I struggled with getting the board centered to mimic a classroom chalk board. I was toggling between the body dimensions and the chalkboard container. I have my best solution so far by adjusting the min and max-width of the chalkboard. From there I made the chalkboard a flex container and centered the content within it.
 
 
 
-##Sources:
+## Sources:
 
 Help with removing outter borders from game grid: 
 https://stackoverflow.com/questions/19339578/a-grid-of-boxes-with-no-outer-border-but-with-all-inner-borders
